@@ -1,0 +1,14 @@
+.main {
+  display: flex;
+
+  .section-1 {
+    flex: 1;
+    background-color: gray;
+    height: 100vh;
+    border-right: solid 1px black;
+  }
+
+  .section-2 {
+    flex: 5
+  }
+}
