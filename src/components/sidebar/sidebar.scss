@@ -4,3 +4,10 @@
     height: 100vh;
     border-right: solid 1px black;
   }
+
+  @media(max-width: 767px) {
+    .section-1 {
+      // visibility: hidden;
+      display: none;
+    }
+  }

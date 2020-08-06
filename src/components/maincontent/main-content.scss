@@ -33,4 +33,38 @@
             margin-left: 30px
         }
     }
+
+    @media(max-width: 1023px) {
+        .upper-section {
+            flex-direction: column;
+        }
+
+        .lower-section {
+            flex-direction: column;
+        }
+    }
+
+    @media(max-width: 767px) {
+        .upper-section {
+            margin-bottom: 0;
+
+            .line-upper {
+                margin-bottom: 50px;
+            }
+
+            .charts {
+                flex-direction: column;
+    
+                .chart-display {
+                    margin-bottom: 50px;
+                }
+            }
+        }
+
+        .lower-section {
+            .bar-lower {
+                margin-bottom: 50px;
+            }
+        }
+    }
   }
