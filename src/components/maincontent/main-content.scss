@@ -1,70 +1,179 @@
-.section-2 {
+.main-content {
     flex: 5;
+    background-color: #212224;
+    color: #adb7be;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 100vh;
 
-    .details {
-        height: 50px;
+    .temperature {
+        // margin-top: 20px;
+        width: 80vw;
+        // height: 50vh;
+        background-color: #323437;
+        border-radius: 8px;
     }
 
-    .upper-section {
+    .temp-text {
+        margin-bottom:5px;
+    }
+
+    .ethnic-religion {
         display: flex;
-        margin-bottom: 60px;
+        margin-top: 20px;
 
-        .charts {
-            flex: 1;
-            display: flex
-        }
+        .religion {
+            width: 20vw;
+            height: 30vh;
+            .religion-content {
+                background-color:#323437;
+                width: inherit;
+                height: 20vh;
 
-        .line-upper {
-            flex: 1;
-            margin-left: 40px;
-        }
-    }
+                .christian {
+                    display: flex;
 
-    .lower-section {
-        display: flex;
+                    .christian-icon {
+                        margin-top: 15px;
+                        margin-left: 10px;
+                    }
 
-        .bar-lower {
-            flex: 1;
-            margin-left: 30px;
-        }
+                    .text-and-bar {
+                        display: flex;
+                        flex-direction: column;
+                        margin-left: 10px;
 
-        .line-lower {
-            flex: 1;
-            margin-left: 30px
-        }
-    }
+                        .christian-text {
+                            margin-top: 8px;
+                            font-size: small;
+                        }
 
-    @media(max-width: 1023px) {
-        .upper-section {
-            flex-direction: column;
-        }
+                        .progress-bar {
+                            width: 200px;
+                            height: 4px;
+                            background-color: aliceblue;
+                            border-radius: 10px;
 
-        .lower-section {
-            flex-direction: column;
-        }
-    }
-
-    @media(max-width: 767px) {
-        .upper-section {
-            margin-bottom: 0;
-
-            .line-upper {
-                margin-bottom: 50px;
-            }
-
-            .charts {
-                flex-direction: column;
-    
-                .chart-display {
-                    margin-bottom: 50px;
+                            .progress-christian {
+                                background-color: black;
+                                height: inherit;
+                                width: 30px;
+                                border-radius: 10px;
+                            }
+                        }
+                    }
                 }
             }
         }
 
-        .lower-section {
-            .bar-lower {
-                margin-bottom: 50px;
+        .tribes {
+            display: flex;
+            .tribe-one {
+                width: 10vw;
+                height: 20vh;
+                background-color: blue;
+            }
+    
+            .tribe-two {
+                width: 10vw;
+                height: 20vh;
+                background-color: red;
+            }
+    
+            .tribe-three {
+                width: 10vw;
+                height: 20vh;
+                background-color: black;
             }
         }
     }
-  }
+    
+
+    @media(min-width: 769px) {
+        button {
+            display: none;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// .section-2 {
+//     flex: 5;
+
+//     .details {
+//         height: 50px;
+//     }
+
+//     .upper-section {
+//         display: flex;
+//         margin-bottom: 60px;
+
+//         .charts {
+//             flex: 1;
+//             display: flex
+//         }
+
+//         .line-upper {
+//             flex: 1;
+//             margin-left: 40px;
+//         }
+//     }
+
+//     .lower-section {
+//         display: flex;
+
+//         .bar-lower {
+//             flex: 1;
+//             margin-left: 30px;
+//         }
+
+//         .line-lower {
+//             flex: 1;
+//             margin-left: 30px
+//         }
+//     }
+
+//     @media(max-width: 1023px) {
+//         .upper-section {
+//             flex-direction: column;
+//         }
+
+//         .lower-section {
+//             flex-direction: column;
+//         }
+//     }
+
+//     @media(max-width: 767px) {
+//         .upper-section {
+//             margin-bottom: 0;
+
+//             .line-upper {
+//                 margin-bottom: 50px;
+//             }
+
+//             .charts {
+//                 flex-direction: column;
+    
+//                 .chart-display {
+//                     margin-bottom: 50px;
+//                 }
+//             }
+//         }
+
+//         .lower-section {
+//             .bar-lower {
+//                 margin-bottom: 50px;
+//             }
+//         }
+//     }
+//   }
