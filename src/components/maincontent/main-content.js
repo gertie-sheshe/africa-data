@@ -7,6 +7,20 @@ defaults.global.defaultFontFamily = "Raleway', sans-serif";
 console.log('DEFAULTS', defaults)
 class MainContent extends Component {
     render() {
+        const dataFour = {
+            labels: ['Nairobi', 'Mombasa', 'Nakuru', 'Eldoret', 'Kisumu', 'Kisii', 'Naivasha', 'Machakos', 'Malindi', 'Bondo'],
+            datasets: [
+              {
+                label: 'Top Populated Cities',
+                backgroundColor: 'rgba(255,99,132,0.2)',
+                borderColor: 'rgba(255,99,132,1)',
+                borderWidth: 1,
+                hoverBackgroundColor: 'rgba(255,99,132,0.4)',
+                hoverBorderColor: 'rgba(255,99,132,1)',
+                data: [65, 59, 80, 81, 56, 55, 76, 100, 86, 50]
+              }
+            ]
+        };
 
         const dataThree = {
             labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
@@ -16,13 +30,14 @@ class MainContent extends Component {
                 fontColor: 'rgba(248,248,255, 1)',
                 fill: false,
                 lineTension: 0.1,
-                backgroundColor: 'rgba(75,192,192,0.4)',
+                backgroundColor: 'rgba(75,192,192,1)',
                 borderColor: 'rgba(75,192,192,1)',
                 borderCapStyle: 'butt',
                 borderDash: [],
                 borderDashOffset: 0.0,
                 borderJoinStyle: 'miter',
                 pointBorderColor: 'rgba(75,192,192,1)',
+                // pointBorderColor: '#ba54f5',
                 pointBackgroundColor: '#fff',
                 pointBorderWidth: 5,
                 pointHoverRadius: 5,
@@ -30,11 +45,16 @@ class MainContent extends Component {
                 pointHoverBorderColor: 'rgba(220,220,220,1)',
                 pointHoverBorderWidth: 2,
                 pointRadius: 1,
-                pointHitRadius: 10,
+                    pointHitRadius: 10,
+                    options: {
+                        maintainAspectRatio : false
+                      },
                 data: [29, 25, 27, 26, 23, 21, 19, 20, 23, 24, 25, 26]
               }
             ]
         };
+
+       
 
         return (
             <div className="main-content">
@@ -49,50 +69,85 @@ class MainContent extends Component {
                         <p>Religion</p>
                         <div className='religion-content'>
                             <div className="christian">
-                                <i className="fa fa-fire christian-icon" aria-hidden="true"></i>
                                 <div className="text-and-bar">
                                     <p className="christian-text">Christian</p>
                                     <div className="progress-bar">
-                                        <div className="progress-christian"></div>
+                                        <div className="progress-christian christian-color"></div>
                                     </div>
                                 </div>
                             </div>
 
                             <div className="christian">
-                                <i className="fa fa-fire christian-icon" aria-hidden="true"></i>
                                 <div className="text-and-bar">
-                                    <p className="christian-text">Christian</p>
+                                    <p className="islam-text">Islam</p>
                                     <div className="progress-bar">
-                                        <div className="progress-christian"></div>
+                                        <div className="progress-islam"></div>
                                     </div>
                                 </div>
                             </div>
 
                             <div className="christian">
-                                <i className="fa fa-fire christian-icon" aria-hidden="true"></i>
                                 <div className="text-and-bar">
-                                    <p className="christian-text">Christian</p>
+                                    <p className="other-text">Other</p>
                                     <div className="progress-bar">
-                                        <div className="progress-christian"></div>
+                                        <div className="progress-other"></div>
                                     </div>
                                 </div>
                             </div>
-
-
-                            {/* <div className="islam">
-                                <i class="fa fa-fire" aria-hidden="true"></i>
-                                <span>Islam</span>
-                            </div>
-                            <div className="others">
-                                <i class="fa fa-fire" aria-hidden="true"></i>
-                                <span>Others</span>
-                            </div> */}
                         </div>
                     </div>
                     <div className="tribes">
-                        <div className="tribe-one"></div>
-                        <div className="tribe-two"></div>
-                        <div className="tribe-three"></div>
+                        <p>Ethnicity</p>
+                        <div className="tribe-sections">
+                            <div className="tribe-one common">
+                                <div className="icon">
+                                    <div className="icon-one">
+                                        <i class="fa fa-user-o" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div className="ethnic-data">
+                                    <p className="tribe-name">Kikuyu</p>
+                                    <p>40%</p>
+                                </div>
+                            </div>
+
+                            <div className="tribe-one common">
+                                <div className="icon">
+                                    <div className="icon-one">
+                                        <i class="fa fa-user-o" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div className="ethnic-data">
+                                    <p className="tribe-name">Kikuyu</p>
+                                    <p>40%</p>
+                                </div>
+                            </div>
+
+                            <div className="tribe-one common">
+                                <div className="icon">
+                                    <div className="icon-one">
+                                        <i class="fa fa-user-o" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div className="ethnic-data">
+                                    <p className="tribe-name">Kikuyu</p>
+                                    <p>40%</p>
+                                </div>
+                            </div>
+                            {/* <div className="tribe-two common"></div>
+                            <div className="tribe-three common"></div> */}
+                        </div>
+                    </div>
+                </div>
+                <div >
+                    <p>Population and Tourism</p>
+                    <div className="bar-graphs">
+                        <div className="bar-one">
+                            <Bar data={dataFour}/>
+                        </div>
+                        <div className="bar-two">
+                            <Bar data={dataFour}/>
+                        </div>
                     </div>
                 </div>
                 {/* <button onClick={this.props.toggleState}>Press Me</button>
@@ -168,20 +223,7 @@ export default MainContent;
 // //     }
 // // }
 
-// const dataFour = {
-//     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-//     datasets: [
-//       {
-//         label: 'My First dataset',
-//         backgroundColor: 'rgba(255,99,132,0.2)',
-//         borderColor: 'rgba(255,99,132,1)',
-//         borderWidth: 1,
-//         hoverBackgroundColor: 'rgba(255,99,132,0.4)',
-//         hoverBorderColor: 'rgba(255,99,132,1)',
-//         data: [65, 59, 80, 81, 56, 55, 40]
-//       }
-//     ]
-// };
+
 
 // const dataFive = {
 //     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],

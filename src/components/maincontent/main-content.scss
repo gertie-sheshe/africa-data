@@ -5,6 +5,7 @@
     padding-left: 30px;
     padding-right: 30px;
     height: 100vh;
+    overflow-y: scroll;
 
     .temperature {
         // margin-top: 20px;
@@ -23,19 +24,32 @@
         margin-top: 20px;
 
         .religion {
-            width: 20vw;
+            // width: 20vw;
             height: 30vh;
+            padding-right: 30px;
+            display: flex;
+            flex-direction: column;
+            
             .religion-content {
                 background-color:#323437;
-                width: inherit;
+                // width: inherit;
                 height: 20vh;
+                border-radius: 8px;
+                padding-right: 30px;
 
                 .christian {
                     display: flex;
 
-                    .christian-icon {
-                        margin-top: 15px;
-                        margin-left: 10px;
+                    .christian-color {
+                        color:  #fff;
+                    }
+
+                    .islam-color {
+                        color:  #fff
+                    }
+
+                    .other-color {
+                        color:  rgba(75,192,192,1);
                     }
 
                     .text-and-bar {
@@ -46,16 +60,47 @@
                         .christian-text {
                             margin-top: 8px;
                             font-size: small;
+                            color: #fff;
+                        }
+
+                        .islam-text {
+                            margin-top: 8px;
+                            font-size: small;
+                            color: #fff
+                        }
+
+                        .other-text {
+                            margin-top: 8px;
+                            font-size: small;
+                            color: #fff
                         }
 
                         .progress-bar {
                             width: 200px;
                             height: 4px;
-                            background-color: aliceblue;
+                            background-color: #616161;
+                            // background-color:#adb7be;
                             border-radius: 10px;
 
                             .progress-christian {
-                                background-color: black;
+                                // background-color: #ff6e40;
+                                background-image: linear-gradient(to bottom left,#ff8d72,#ff6491,#ff8d72);
+                                height: inherit;
+                                width: 180px;
+                                border-radius: 10px;
+                            }
+
+                            .progress-islam {
+                                // background-color: #18ffff;
+                                background-image: linear-gradient(to bottom left,#e14eca,#ba54f5,#e14eca);
+                                height: inherit;
+                                width: 100px;
+                                border-radius: 10px;
+                            }
+
+                            .progress-other {
+                                // background-color: #b2ff59;
+                                background-image: linear-gradient(to bottom left,#00f2c3,#0098f0,#00f2c3);
                                 height: inherit;
                                 width: 30px;
                                 border-radius: 10px;
@@ -67,24 +112,98 @@
         }
 
         .tribes {
-            display: flex;
+            // display: flex;
+            margin-left: 30px;
+
+            .common {
+                background-color: #323437;
+                margin-right: 30px;
+                border-radius: 8px;
+                width: 150px;
+                padding-top:30px;
+                // color: #fff
+            }
+
+            .tribe-sections {
+                display: flex;
+            }
+
             .tribe-one {
-                width: 10vw;
+                width: 180px;
                 height: 20vh;
-                background-color: blue;
+                display: flex;
+                padding-right: 15px;
+                padding-left: 15px;
+
+                .ethnic-data {
+                    .tribe-name {
+                        font-size: larger;
+                    }
+                    p {
+                        margin: 0;
+                        // color: #fff;
+                    }
+                    height: 70px;
+                    border-bottom: solid 1px;
+                }
+
+                .icon {
+                    flex: 1;
+                    height: 70px;
+                    border-bottom: solid 1px;
+                    
+                    .icon-one {
+                        
+                        height: 40px;
+                        width: 40px;
+                        // background-image: linear-gradient(to bottom left,#ff8d72,#ff6491,#ff8d72);
+                        background-image: linear-gradient(to bottom left,#e14eca,#ba54f5,#e14eca);
+                        // background-color: antiquewhite;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        .fa-user-o {
+                            color:#fff
+                        }
+                    }
+
+                    
+                }
+                // background-color: blue;
             }
     
             .tribe-two {
                 width: 10vw;
                 height: 20vh;
-                background-color: red;
+                // background-color: red;
             }
     
             .tribe-three {
                 width: 10vw;
                 height: 20vh;
-                background-color: black;
+                // background-color: black;
             }
+        }
+    }
+
+    .bar-graphs {
+        display: flex;
+        margin-bottom: 20px;
+
+        .bar-one {
+            flex: 1;
+            background-color: #323437;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+
+        .bar-two {
+            flex: 1;
+            background-color: #323437;
+            border-radius: 8px;
+            // margin-right: 20px;
         }
     }
     
