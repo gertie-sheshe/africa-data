@@ -8,12 +8,29 @@ console.log('DEFAULTS', defaults)
 class MainContent extends Component {
     render() {
         const dataFour = {
+            labels: ['Kikuyu', 'Luhya', 'Kalenjin', 'Luo', 'Kamba', 'Somalis', 'Kisiis', 'Mijikenda', 'Other'],
+            datasets: [
+              {
+                label: 'Ethnic Groups %',
+                fill: true,
+                backgroundColor: 'rgb(255, 100, 145, 0.7)',
+                borderColor: 'rgba(255,99,132,1)',
+                borderWidth: 1,
+                hoverBackgroundColor: 'rgba(255,99,132,0.4)',
+                hoverBorderColor: 'rgba(255,99,132,1)',
+                data: [17.13, 14.35, 13.37, 10.65, 9.81, 5.85, 5.68, 5.23, 13.78]
+              }
+            ]
+        };
+
+        const dataFive = {
             labels: ['Nairobi', 'Mombasa', 'Nakuru', 'Eldoret', 'Kisumu', 'Kisii', 'Naivasha', 'Machakos', 'Malindi', 'Bondo'],
             datasets: [
               {
                 label: 'Top Populated Cities',
-                backgroundColor: 'rgba(255,99,132,0.2)',
-                borderColor: 'rgba(255,99,132,1)',
+                fill: true,
+                backgroundColor: 'rgba(75,192,192,0.2)',
+                borderColor: 'rgba(75,192,192,1)',
                 borderWidth: 1,
                 hoverBackgroundColor: 'rgba(255,99,132,0.4)',
                 hoverBorderColor: 'rgba(255,99,132,1)',
@@ -58,7 +75,14 @@ class MainContent extends Component {
 
         return (
             <div className="main-content">
-                <div className="country-details">Capital, Population, Size</div>
+                <div className="details-button">
+                    <div className="responsive-button">Press Me</div>
+                    <div className="country-details">
+                        <p><b>Country:</b> Kenya</p>
+                        <p><b>Population:</b> 45,000,000</p>
+                        <p><b>Size:</b> 4 billion sq/km</p>
+                    </div>
+                </div>
                 <p className="temp-text">Temperature</p>
                 <div className="temperature">
                     <Line data={dataThree} height={80}/>
@@ -97,53 +121,66 @@ class MainContent extends Component {
                         </div>
                     </div>
                     <div className="tribes">
-                        <p>Ethnicity</p>
+                        <p>Top 3 Tribes</p>
                         <div className="tribe-sections">
-                            <div className="tribe-one common">
-                                <div className="icon">
-                                    <div className="icon-one">
-                                        <i class="fa fa-user-o" aria-hidden="true"></i>
+                            <div className="common">
+                                <div className="tribe-one">
+                                    <div className="icon">
+                                        <div className="icon-one">
+                                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                    <div className="ethnic-data">
+                                        <p className="tribe-name">Kikuyu</p>
+                                        <p>40%</p>
                                     </div>
                                 </div>
-                                <div className="ethnic-data">
-                                    <p className="tribe-name">Kikuyu</p>
-                                    <p>40%</p>
-                                </div>
+                                <div className="tribe-type">Bantus</div>
                             </div>
 
-                            <div className="tribe-one common">
-                                <div className="icon">
-                                    <div className="icon-one">
-                                        <i class="fa fa-user-o" aria-hidden="true"></i>
+                            <div className="common">
+                                <div className="tribe-one">
+                                    <div className="icon">
+                                        <div className="icon-one two">
+                                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                    <div className="ethnic-data">
+                                        <p className="tribe-name">Kikuyu</p>
+                                        <p>40%</p>
                                     </div>
                                 </div>
-                                <div className="ethnic-data">
-                                    <p className="tribe-name">Kikuyu</p>
-                                    <p>40%</p>
-                                </div>
+                                <div className="tribe-type">Bantus</div>
                             </div>
 
-                            <div className="tribe-one common">
-                                <div className="icon">
-                                    <div className="icon-one">
-                                        <i class="fa fa-user-o" aria-hidden="true"></i>
+                            <div className="common">
+                                <div className="tribe-one">
+                                    <div className="icon">
+                                        <div className="icon-one three">
+                                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                    <div className="ethnic-data">
+                                        <p className="tribe-name">Kikuyu</p>
+                                        <p>40%</p>
                                     </div>
                                 </div>
-                                <div className="ethnic-data">
-                                    <p className="tribe-name">Kikuyu</p>
-                                    <p>40%</p>
-                                </div>
+                                <div className="tribe-type">Bantus</div>
                             </div>
+
+                            
+
+                            
                             {/* <div className="tribe-two common"></div>
                             <div className="tribe-three common"></div> */}
                         </div>
                     </div>
                 </div>
                 <div >
-                    <p>Population and Tourism</p>
+                    <p>Population and Ethnic Groups</p>
                     <div className="bar-graphs">
                         <div className="bar-one">
-                            <Bar data={dataFour}/>
+                            <Bar data={dataFive}/>
                         </div>
                         <div className="bar-two">
                             <Bar data={dataFour}/>
