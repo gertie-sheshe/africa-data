@@ -1,3 +1,30 @@
+#side-panel {
+  overflow: scroll;
+
+  .region-button {
+    min-width: 97%;
+    background-color: #52575d;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor:pointer;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    margin-left: 3px;
+  }
+
+  .ea-countries-list {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      text-decoration: none;
+      color: white;
+      padding: 10px;
+    }
+  }
+}
+
 .section-1 {
   flex: 1;
   background-color: #323437;
@@ -14,7 +41,7 @@
   }
 
   @media(min-width: 769px) {
-    button {
+    .sidebar-button {
         display: none;
     }
   }
@@ -33,7 +60,7 @@
   }
 
   @media(min-width: 769px) {
-    button {
+    .sidebar-button {
         display: none;
     }
   }
