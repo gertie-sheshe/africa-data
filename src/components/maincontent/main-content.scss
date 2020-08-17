@@ -10,7 +10,12 @@
     .details-button {
         .country-details {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
+            // background-color: #323437;
+            // padding-right: 10px;
+            // padding-left: 10px;
+            // border-radius: 8px;
+            // margin-top: 10px;
 
             b {
                 color: #fff

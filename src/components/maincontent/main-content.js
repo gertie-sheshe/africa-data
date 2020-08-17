@@ -76,7 +76,7 @@ class MainContent extends Component {
         return (
             <div className="main-content">
                 <div className="details-button">
-                    <div className="responsive-button">Press Me</div>
+                    {/* <div className="responsive-button"></div> */}
                     <div className="country-details">
                         <p><b>Country:</b> Kenya</p>
                         <p><b>Population:</b> 45,000,000</p>
@@ -180,10 +180,10 @@ class MainContent extends Component {
                     <p>Population and Ethnic Groups</p>
                     <div className="bar-graphs">
                         <div className="bar-one">
-                            <Bar data={dataFive}/>
+                            <Bar data={dataFour}/>
                         </div>
                         <div className="bar-two">
-                            <Bar data={dataFour}/>
+                            <Bar data={dataFive}/>
                         </div>
                     </div>
                 </div>
