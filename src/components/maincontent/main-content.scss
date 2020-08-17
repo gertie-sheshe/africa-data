@@ -7,6 +7,10 @@
     height: 100vh;
     overflow-y: scroll;
 
+    .feedback-data {
+        color: white
+    }
+
     .details-button {
         .country-details {
             display: flex;

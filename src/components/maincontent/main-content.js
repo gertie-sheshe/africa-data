@@ -1,12 +1,33 @@
 import React, { Component, Fragment } from 'react';
-import { Line, Bar, defaults} from 'react-chartjs-2';
+import { Line, Bar, defaults } from 'react-chartjs-2';
+import MainSmall from './main-content-small';
 import './main-content.scss';
 
 defaults.global.defaultFontColor = '#adb7be';
 defaults.global.defaultFontFamily = "Raleway', sans-serif";
 class MainContent extends Component {
+    state = {
+        isSmall: window.innerWidth < 768
+    } 
+
+    handlePageSize = () => {
+        this.setState({
+            isSmall: window.innerWidth < 768
+        })
+    }
+
+    componentDidMount = () => {
+        window.addEventListener('resize', this.handlePageSize)
+     }
+    
+    componentWillUnmount = () => {
+        window.removeEventListener('resize', this.handlePageSize)
+    }
+
     render() {
         let countryData = this.props.countryData;
+
+        console.log('SIIIZE', this.state.isSmall)
 
         const ethnicData = {
             labels: countryData ? countryData.ethnic : null,
@@ -76,7 +97,7 @@ class MainContent extends Component {
 
         return (
             <Fragment>
-                {countryData ? < div className = "main-content" >
+                {(!this.state.isSmall && countryData) && < div className = "main-content" >
                 <div className="details-button">
                     {/* <div className="responsive-button"></div> */}
                     <div className="country-details">
@@ -170,12 +191,6 @@ class MainContent extends Component {
                                 </div>
                                 <div className="tribe-type">{countryData.threeEthnic[2].group}</div>
                             </div>
-
-                            
-
-                            
-                            {/* <div className="tribe-two common"></div>
-                            <div className="tribe-three common"></div> */}
                         </div>
                     </div>
                 </div>
@@ -190,7 +205,9 @@ class MainContent extends Component {
                         </div>
                     </div>
                 </div>
-                </div > : <p>Loading</p>}
+                </div >}
+                {!countryData && <div className="main-content"><p>Thank you for visiting :) My data is currently being gathered.</p></div>}
+                {(this.state.isSmall && countryData) && <div className="main-content"><MainSmall countryData={countryData}/></div>}
             </Fragment>
         )
         
