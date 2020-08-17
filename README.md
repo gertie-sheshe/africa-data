@@ -15,8 +15,8 @@ View data on countries from the African continent.
 React. Chartjs.
 
 ## Screenshots
-[Screenshot-2020-08-17-at-20-17-16.png](https://postimg.cc/svy1qS5v)
+[![Screenshot-2020-08-17-at-20-17-16.png](https://i.postimg.cc/15V6grtc/Screenshot-2020-08-17-at-20-17-16.png)](https://postimg.cc/svy1qS5v)
 
-[Screenshot-2020-08-17-at-20-17-32.png](https://postimg.cc/JG14P8WX)
+[![Screenshot-2020-08-17-at-20-17-32.png](https://i.postimg.cc/fTdtWW28/Screenshot-2020-08-17-at-20-17-32.png)](https://postimg.cc/JG14P8WX)
 
-[Screenshot-2020-08-17-at-20-18-20.png](https://postimg.cc/VrqmWGG4)
+[![Screenshot-2020-08-17-at-20-18-20.png](https://i.postimg.cc/FRqzmwjt/Screenshot-2020-08-17-at-20-18-20.png)](https://postimg.cc/VrqmWGG4)
