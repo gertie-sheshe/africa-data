@@ -2,26 +2,44 @@
   overflow: scroll;
 
   .region-button {
-    min-width: 97%;
+    min-width: 100%;
     background-color: #52575d;
     border: none;
     color: white;
     padding: 10px;
     cursor:pointer;
     margin-bottom: 10px;
-    border-radius: 5px;
-    margin-left: 3px;
+    // border-radius: 5px;
+    // margin-left: 3px;
   }
 
   .ea-countries-list {
     display: flex;
     flex-direction: column;
 
-    a {
-      text-decoration: none;
-      color: white;
-      padding: 10px;
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      li:hover {
+        background-color: rgba(0,0,0,0.2);
+        cursor: pointer;
+      }
     }
+
+    // a {
+    //   text-decoration: none;
+    //   color: white;
+    //   padding: 10px;
+    // }
   }
 }
 

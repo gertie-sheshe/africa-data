@@ -16,6 +16,12 @@ class App extends Component {
     })
   }
 
+  selectCountry = (country) => {
+    this.setState({
+      data: countries[country]
+    })
+  }
+
   componentDidMount = () => {
     this.setState({
       data: countries['kenya']
@@ -26,7 +32,7 @@ class App extends Component {
     let countryData = this.state.data
     return (
       <main className="main">
-        <SideBar toggle={this.state.toggle} toggleState={this.toggleState}/>
+        <SideBar selectCountry={this.selectCountry} toggle={this.state.toggle} toggleState={this.toggleState}/>
         <MainContent countryData={countryData} toggleState={this.toggleState}/>
       </main>
     );

@@ -11,9 +11,11 @@ class SideBar extends Component {
 
         <button className="region-button">EAST AFRICA</button>
         <div className="ea-countries-list">
-          <a href="none.com">Kenya</a>
-          <a href="none.com">Uganda</a>
-          <a href="none.com">Tanzania</a>
+          <ul>
+            <li>Kenya</li>
+            <li onClick={() => this.props.selectCountry('uganda')}>Uganda</li>
+            <li>Tanzania</li>
+          </ul>
         </div>
 
         <button className="region-button">SOUTH AFRICA</button>

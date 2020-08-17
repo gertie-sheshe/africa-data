@@ -80,9 +80,10 @@ class MainContent extends Component {
                 <div className="details-button">
                     {/* <div className="responsive-button"></div> */}
                     <div className="country-details">
-                    <p><b>Country: </b>{countryData.country}</p>
-                    <p><b>Population: </b>{countryData.population}</p>
-                    <p><b>Size: </b>{countryData.size}</p>
+                        <p><b>Country: </b>{countryData.country}</p>
+                        <p><b>Capital: </b>{countryData.capital}</p>
+                        <p><b>Population: </b>{countryData.population}</p>
+                        <p><b>Size: </b>{countryData.size}</p>
                     </div>
                 </div>
                 <p className="temp-text">Temperature</p>
