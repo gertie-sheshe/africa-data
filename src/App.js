@@ -33,8 +33,8 @@ class App extends Component {
   }
 
   render() {
-    let countryData = this.state.data
-    console.log('culprit data', countryData)
+    let countryData = this.state.data;
+    
     return (
       <main className="main">
         <SideBar selectCountry={this.selectCountry} toggle={this.state.toggle} toggleState={this.toggleState}/>

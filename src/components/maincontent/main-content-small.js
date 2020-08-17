@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Fragment }from 'react';
 import './main-content-small.scss';
 
 const MainSmall = ({ countryData, toggleState}) => (
@@ -15,8 +15,8 @@ const MainSmall = ({ countryData, toggleState}) => (
         <div>
             <h2>Top Three Tribes</h2>
             <div>
-                {countryData.threeEthnic.map(data => (
-                    <p><b>{data.name} </b>{data.percent}</p>
+                {countryData.threeEthnic.map((data, index) => (
+                    <p key={index}><b>{data.name} </b>{data.percent}</p>
                 ))}
             </div>
         </div>
@@ -24,7 +24,9 @@ const MainSmall = ({ countryData, toggleState}) => (
             <h2>Top Populated Cities</h2>
             <div>
                 {countryData.cities.map((city, index) => (
-                    <p><b>{city} </b>{countryData.citiesPopulation[index]}</p>
+                    <Fragment key={index}>
+                        <p><b>{city} </b>{countryData.citiesPopulation[index]}</p>
+                    </Fragment>
                 ))}
             </div>
         </div>

@@ -28,8 +28,6 @@ class MainContent extends Component {
         let countryData = this.props.countryData;
         let toggleState = this.props.toggleState;
 
-        console.log('SIIIZE', this.state.isSmall)
-
         const ethnicData = {
             labels: countryData ? countryData.ethnic : null,
             datasets: [
