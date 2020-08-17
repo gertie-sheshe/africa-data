@@ -19,7 +19,11 @@ class App extends Component {
   selectCountry = (country) => {
     this.setState({
       data: countries[country]
-    })
+    });
+
+    if (window.innerWidth < 768) {
+      this.toggleState();
+    }
   }
 
   componentDidMount = () => {

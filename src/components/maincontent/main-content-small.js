@@ -1,8 +1,9 @@
 import React from 'react';
 import './main-content-small.scss';
 
-const MainSmall = ({ countryData}) => (
+const MainSmall = ({ countryData, toggleState}) => (
     <div>
+        <button onClick={toggleState} className="responsive-button">Regions Menu</button>
         <p className="feedback">To see more data visually displayed, visit site on desktop :)</p>
         <div className="country-data">
             <h1>{countryData.country}</h1>

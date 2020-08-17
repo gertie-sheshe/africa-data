@@ -26,6 +26,7 @@ class MainContent extends Component {
 
     render() {
         let countryData = this.props.countryData;
+        let toggleState = this.props.toggleState;
 
         console.log('SIIIZE', this.state.isSmall)
 
@@ -99,7 +100,7 @@ class MainContent extends Component {
             <Fragment>
                 {(!this.state.isSmall && countryData) && < div className = "main-content" >
                 <div className="details-button">
-                    {/* <div className="responsive-button"></div> */}
+                    <button onClick={toggleState}className="responsive-button-main">Regions Menu</button>
                     <div className="country-details">
                         <p><b>Country: </b>{countryData.country}</p>
                         <p><b>Capital: </b>{countryData.capital}</p>
@@ -206,8 +207,13 @@ class MainContent extends Component {
                     </div>
                 </div>
                 </div >}
-                {!countryData && <div className="main-content"><p>Thank you for visiting :) My data is currently being gathered.</p></div>}
-                {(this.state.isSmall && countryData) && <div className="main-content"><MainSmall countryData={countryData}/></div>}
+                {!countryData &&
+                    <div className="main-content">
+                        <button onClick={toggleState} className="responsive-button-main">Regions Menu</button>
+                        <p>Thank you for visiting :) My data is currently being gathered.</p>
+                    </div>
+                }
+                {(this.state.isSmall && countryData) && <div className="main-content"><MainSmall toggleState={this.props.toggleState} countryData={countryData}/></div>}
             </Fragment>
         )
         

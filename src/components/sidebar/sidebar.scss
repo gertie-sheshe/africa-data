@@ -1,6 +1,14 @@
 #side-panel {
   overflow: scroll;
 
+  .sidebar-button {
+    background-color: rgba(190, 190, 190, 0.2);
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+  }
+
   .africa-regions {
     text-align: center;
   }
