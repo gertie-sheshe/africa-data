@@ -1,9 +1,14 @@
 #side-panel {
   overflow: scroll;
 
+  .africa-regions {
+    text-align: center;
+  }
+
   .region-button {
     min-width: 100%;
-    background-color: #52575d;
+    // background-color: rgba(0,0,0,0.2);
+    background-color: #323437;
     border: none;
     color: white;
     padding: 10px;
@@ -13,9 +18,11 @@
     // margin-left: 3px;
   }
 
+  .region-button:hover {
+    background-color: rgba(0,0,0,0.2);
+  }
+
   .ea-countries-list {
-    display: flex;
-    flex-direction: column;
 
     ul {
       list-style-type: none;

@@ -1,5 +1,5 @@
 export default {
-    kenya: {
+    Kenya: {
         country: 'Kenya',
         size: '580,367 sq/km',
         capital: 'Nairobi',
@@ -12,7 +12,7 @@ export default {
         religion: [{ name: 'Christian', size: '180px' }, { name: 'Islam', size: '100px' }, { name: 'Other', size: '30px' }],
         threeEthnic: [{name: 'Kikuyu', percent: '17.13%', group: 'Bantus'}, {name: 'Luhya', percent: '14.35%', group: 'Bantus'}, {name: 'Kalenjin', percent: '13.37%', group: 'Nilotes'}]
     },
-    uganda: {
+    Uganda: {
         country: 'Uganda',
         size: '241,038 sq/km',
         capital: 'Kampala',
@@ -24,5 +24,18 @@ export default {
         ethnicData: [16.5, 9.6, 8.8, 7.1, 7, 6.3, 4.9, 4.4, 3.3, 32.1],
         religion: [{ name: 'Christian', size: '180px' }, { name: 'Islam', size: '100px' }, { name: 'Other', size: '30px' }],
         threeEthnic: [{name: 'Baganda', percent: '16.5%', group: 'Bantus'}, {name: 'Banyankole', percent: '9.6%', group: 'Bantus'}, {name: 'Basoga', percent: '8.8%', group: 'Nilotes'}]
+    },
+    Tanzania: {
+        country: 'Tanzania',
+        size: '947,303 sq/km',
+        capital: 'Dodoma',
+        population: '56.3 million',
+        temperature: [32, 32, 32, 31, 30, 29, 29, 29, 30, 31, 31, 32],
+        cities: ['Dar es Salam', 'Mwanza', 'Arusha', 'Dodoma', 'Mbeya', 'Morogoro', 'Tanga', 'Kahama', 'Tabora', 'Zanzibar'],
+        citiesPopulation: [4364541, 706543, 416442, 410956, 385279, 315866, 273332, 242208, 226999, 223033],
+        ethnic: ['Sukuma', 'Chagga', 'Maasai', 'Hadza', 'Iraqw', ],
+        ethnicData: [16.5, 9.6, 8.8, 7.1, 7, 6.3, 4.9, 4.4, 3.3, 32.1],
+        religion: [{ name: 'Christian', size: '150px' }, { name: 'Islam', size: '110px' }, { name: 'Other', size: '50px' }],
+        threeEthnic: [{name: 'Sukuma', percent: '9%', group: 'Bantu'}, {name: 'Chagga', percent: '3.5%', group: 'Bantu'}, {name: 'Maasai', percent: '1.8%', group: 'Bantu'}]
     }
 };

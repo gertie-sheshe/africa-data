@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import SideBar from './components/sidebar/sidebar';
 import MainContent from './components/maincontent/main-content';
-import countries from './countries';
+import countries from './data/countries';
 import './App.scss';
 
 class App extends Component {
@@ -24,12 +24,13 @@ class App extends Component {
 
   componentDidMount = () => {
     this.setState({
-      data: countries['kenya']
+      data: countries['Kenya']
     });
   }
 
   render() {
     let countryData = this.state.data
+    console.log('culprit data', countryData)
     return (
       <main className="main">
         <SideBar selectCountry={this.selectCountry} toggle={this.state.toggle} toggleState={this.toggleState}/>
