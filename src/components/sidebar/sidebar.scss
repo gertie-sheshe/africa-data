@@ -20,18 +20,17 @@
     border: none;
     color: white;
     padding: 10px;
-    cursor:pointer;
+    cursor: pointer;
     margin-bottom: 10px;
     // border-radius: 5px;
     // margin-left: 3px;
   }
 
   .region-button:hover {
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0, 0, 0, 0.2);
   }
 
   .ea-countries-list {
-
     ul {
       list-style-type: none;
       margin: 0;
@@ -45,7 +44,7 @@
       }
 
       li:hover {
-        background-color: rgba(0,0,0,0.2);
+        background-color: rgba(0, 0, 0, 0.2);
         cursor: pointer;
       }
     }
@@ -63,9 +62,8 @@
   background-color: #323437;
   height: 100vh;
   color: #fff;
-  
 
-  @media(max-width: 769px) {
+  @media (max-width: 769px) {
     position: fixed;
     z-index: 1;
     opacity: 0.9;
@@ -73,9 +71,9 @@
     display: none;
   }
 
-  @media(min-width: 769px) {
+  @media (min-width: 769px) {
     .sidebar-button {
-        display: none;
+      display: none;
     }
   }
 }
@@ -85,22 +83,19 @@
   height: 100vh;
   color: #fff;
 
-  @media(max-width: 769px) {
+  @media (max-width: 769px) {
     position: fixed;
     z-index: 1;
     opacity: 0.9;
     width: 100vw;
   }
 
-  @media(min-width: 769px) {
+  @media (min-width: 769px) {
     .sidebar-button {
-        display: none;
+      display: none;
     }
   }
 }
-
-
-
 
 // .section-1 {
 //     flex: 1;

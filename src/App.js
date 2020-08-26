@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import SideBar from './components/sidebar/sidebar';
 import MainContent from './components/maincontent/main-content';
 import countries from './data/countries';
@@ -7,38 +7,42 @@ import './App.scss';
 class App extends Component {
   state = {
     toggle: false,
-    data: null
-  }
+    data: null,
+  };
 
   toggleState = () => {
     this.setState({
-      toggle: !this.state.toggle
-    })
-  }
+      toggle: !this.state.toggle,
+    });
+  };
 
   selectCountry = (country) => {
     this.setState({
-      data: countries[country]
+      data: countries[country],
     });
 
     if (window.innerWidth < 768) {
       this.toggleState();
     }
-  }
+  };
 
   componentDidMount = () => {
     this.setState({
-      data: countries['Kenya']
+      data: countries['Kenya'],
     });
-  }
+  };
 
   render() {
     let countryData = this.state.data;
-    
+
     return (
       <main className="main">
-        <SideBar selectCountry={this.selectCountry} toggle={this.state.toggle} toggleState={this.toggleState}/>
-        <MainContent countryData={countryData} toggleState={this.toggleState}/>
+        <SideBar
+          selectCountry={this.selectCountry}
+          toggle={this.state.toggle}
+          toggleState={this.toggleState}
+        />
+        <MainContent countryData={countryData} toggleState={this.toggleState} />
       </main>
     );
   }

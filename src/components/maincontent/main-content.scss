@@ -1,280 +1,293 @@
 .main-content {
-    flex: 5;
-    background-color: #212224;
-    color: #adb7be;
-    padding-left: 30px;
-    padding-right: 30px;
-    height: 100vh;
-    overflow-y: scroll;
+  flex: 5;
+  background-color: #212224;
+  color: #adb7be;
+  padding-left: 30px;
+  padding-right: 30px;
+  height: 100vh;
+  overflow-y: scroll;
 
-    .feedback-data {
-        color: white
-    }
+  .feedback-data {
+    color: white;
+  }
 
-    .responsive-button-main {
-        background-color: rgba(0,0,0,0.2);
-        border: none;
+  .responsive-button-main {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: none;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    padding: 15px;
+    margin-top: 10px;
+  }
+
+  .details-button {
+    .country-details {
+      display: flex;
+      justify-content: space-around;
+      // background-color: #323437;
+      // padding-right: 10px;
+      // padding-left: 10px;
+      // border-radius: 8px;
+      // margin-top: 10px;
+
+      b {
         color: #fff;
-        font-family: 'Raleway', sans-serif;
-        padding: 15px;
-        margin-top: 10px;
+      }
     }
+  }
 
-    .details-button {
-        
-        .country-details {
-            display: flex;
-            justify-content: space-around;
-            // background-color: #323437;
-            // padding-right: 10px;
-            // padding-left: 10px;
-            // border-radius: 8px;
-            // margin-top: 10px;
+  .temperature {
+    // margin-top: 20px;
+    width: 80vw;
+    // height: 50vh;
+    background-color: #323437;
+    border-radius: 8px;
+  }
 
-            b {
-                color: #fff
-            }
-        }
-    }
+  .temp-text {
+    margin-bottom: 5px;
+  }
 
-    .temperature {
-        // margin-top: 20px;
-        width: 80vw;
-        // height: 50vh;
+  .ethnic-religion {
+    display: flex;
+    margin-top: 20px;
+
+    .religion {
+      // width: 20vw;
+      height: 30vh;
+      padding-right: 30px;
+      display: flex;
+      flex-direction: column;
+
+      .religion-content {
         background-color: #323437;
+        // width: inherit;
+        height: 20vh;
         border-radius: 8px;
-    }
+        padding-right: 30px;
 
-    .temp-text {
-        margin-bottom:5px;
-    }
+        .christian {
+          display: flex;
 
-    .ethnic-religion {
-        display: flex;
-        margin-top: 20px;
+          .christian-color {
+            color: #fff;
+          }
 
-        .religion {
-            // width: 20vw;
-            height: 30vh;
-            padding-right: 30px;
+          .islam-color {
+            color: #fff;
+          }
+
+          .other-color {
+            color: rgba(75, 192, 192, 1);
+          }
+
+          .text-and-bar {
             display: flex;
             flex-direction: column;
-            
-            .religion-content {
-                background-color:#323437;
-                // width: inherit;
-                height: 20vh;
-                border-radius: 8px;
-                padding-right: 30px;
+            margin-left: 10px;
 
-                .christian {
-                    display: flex;
-
-                    .christian-color {
-                        color:  #fff;
-                    }
-
-                    .islam-color {
-                        color:  #fff
-                    }
-
-                    .other-color {
-                        color:  rgba(75,192,192,1);
-                    }
-
-                    .text-and-bar {
-                        display: flex;
-                        flex-direction: column;
-                        margin-left: 10px;
-
-                        .christian-text {
-                            margin-top: 8px;
-                            font-size: small;
-                            color: #fff;
-                        }
-
-                        .islam-text {
-                            margin-top: 8px;
-                            font-size: small;
-                            color: #fff
-                        }
-
-                        .other-text {
-                            margin-top: 8px;
-                            font-size: small;
-                            color: #fff
-                        }
-
-                        .progress-bar {
-                            width: 200px;
-                            height: 4px;
-                            background-color: #616161;
-                            // background-color:#adb7be;
-                            border-radius: 10px;
-
-                            .progress-christian {
-                                // background-color: #ff6e40;
-                                background-image: linear-gradient(to bottom left,#ff8d72,#ff6491,#ff8d72);
-                                height: inherit;
-                                // width: 180px;
-                                border-radius: 10px;
-                            }
-
-                            .progress-islam {
-                                // background-color: #18ffff;
-                                background-image: linear-gradient(to bottom left,#e14eca,#ba54f5,#e14eca);
-                                height: inherit;
-                                // width: 100px;
-                                border-radius: 10px;
-                            }
-
-                            .progress-other {
-                                // background-color: #b2ff59;
-                                background-image: linear-gradient(to bottom left,#00f2c3,#0098f0,#00f2c3);
-                                height: inherit;
-                                // width: 30px;
-                                border-radius: 10px;
-                            }
-                        }
-                    }
-                }
+            .christian-text {
+              margin-top: 8px;
+              font-size: small;
+              color: #fff;
             }
+
+            .islam-text {
+              margin-top: 8px;
+              font-size: small;
+              color: #fff;
+            }
+
+            .other-text {
+              margin-top: 8px;
+              font-size: small;
+              color: #fff;
+            }
+
+            .progress-bar {
+              width: 200px;
+              height: 4px;
+              background-color: #616161;
+              // background-color:#adb7be;
+              border-radius: 10px;
+
+              .progress-christian {
+                // background-color: #ff6e40;
+                background-image: linear-gradient(
+                  to bottom left,
+                  #ff8d72,
+                  #ff6491,
+                  #ff8d72
+                );
+                height: inherit;
+                // width: 180px;
+                border-radius: 10px;
+              }
+
+              .progress-islam {
+                // background-color: #18ffff;
+                background-image: linear-gradient(
+                  to bottom left,
+                  #e14eca,
+                  #ba54f5,
+                  #e14eca
+                );
+                height: inherit;
+                // width: 100px;
+                border-radius: 10px;
+              }
+
+              .progress-other {
+                // background-color: #b2ff59;
+                background-image: linear-gradient(
+                  to bottom left,
+                  #00f2c3,
+                  #0098f0,
+                  #00f2c3
+                );
+                height: inherit;
+                // width: 30px;
+                border-radius: 10px;
+              }
+            }
+          }
         }
-
-        .tribes {
-            // display: flex;
-            margin-left: 30px;
-
-            .common {
-                background-color: #323437;
-                margin-right: 30px;
-                border-radius: 8px;
-                // width: 150px;
-                padding-top: 15px;
-                // color: #fff
-            }
-
-            .tribe-sections {
-                display: flex;
-            }
-
-            .tribe-one {
-                width: 180px;
-                // height: 20vh;
-                display: flex;
-                padding-right: 15px;
-                padding-left: 15px;
-
-                .ethnic-data {
-                    .tribe-name {
-                        font-size: larger;
-                    }
-                    p {
-                        margin: 0;
-                    }
-                }
-
-                .icon {
-                    flex: 1;
-                    
-                    .icon-one {
-                        
-                        height: 40px;
-                        width: 40px;
-                        // background-image: linear-gradient(to bottom left,#ff8d72,#ff6491,#ff8d72);
-                        background-image: linear-gradient(to bottom left,#e14eca,#ba54f5,#e14eca);
-                        // background-color: antiquewhite;
-                        border-radius: 50%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-
-                        .fa-user-o {
-                            color:#fff
-                        }
-                    }
-
-                    .two {
-                        background-image: linear-gradient(to bottom left,#ff8d72,#ff6491,#ff8d72);
-                    }
-
-                    .three {
-                        background-image: linear-gradient(to bottom left,#00f2c3,#0098f0,#00f2c3);
-                    }
-
-                    
-                }
-                // background-color: blue;
-            }
-
-            .tribe-type {
-                text-align: center;
-                padding-top: 8px;
-                padding-bottom: 10px;
-                border-top: solid 1px;
-                margin-top: 20px;
-                margin-right: 20px;
-                margin-left: 20px;
-            }
-    
-            .tribe-two {
-                width: 10vw;
-                height: 20vh;
-                // background-color: red;
-            }
-    
-            .tribe-three {
-                width: 10vw;
-                height: 20vh;
-                // background-color: black;
-            }
-        }
+      }
     }
 
-    .bar-graphs {
+    .tribes {
+      // display: flex;
+      margin-left: 30px;
+
+      .common {
+        background-color: #323437;
+        margin-right: 30px;
+        border-radius: 8px;
+        // width: 150px;
+        padding-top: 15px;
+        // color: #fff
+      }
+
+      .tribe-sections {
         display: flex;
-        margin-bottom: 20px;
+      }
 
-        .bar-one {
-            flex: 1;
-            background-color: #323437;
-            border-radius: 8px;
-            margin-right: 20px;
+      .tribe-one {
+        width: 180px;
+        // height: 20vh;
+        display: flex;
+        padding-right: 15px;
+        padding-left: 15px;
+
+        .ethnic-data {
+          .tribe-name {
+            font-size: larger;
+          }
+          p {
+            margin: 0;
+          }
         }
 
-        .bar-two {
-            flex: 1;
-            background-color: #323437;
-            border-radius: 8px;
-            // margin-right: 20px;
+        .icon {
+          flex: 1;
+
+          .icon-one {
+            height: 40px;
+            width: 40px;
+            // background-image: linear-gradient(to bottom left,#ff8d72,#ff6491,#ff8d72);
+            background-image: linear-gradient(
+              to bottom left,
+              #e14eca,
+              #ba54f5,
+              #e14eca
+            );
+            // background-color: antiquewhite;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .fa-user-o {
+              color: #fff;
+            }
+          }
+
+          .two {
+            background-image: linear-gradient(
+              to bottom left,
+              #ff8d72,
+              #ff6491,
+              #ff8d72
+            );
+          }
+
+          .three {
+            background-image: linear-gradient(
+              to bottom left,
+              #00f2c3,
+              #0098f0,
+              #00f2c3
+            );
+          }
         }
+        // background-color: blue;
+      }
+
+      .tribe-type {
+        text-align: center;
+        padding-top: 8px;
+        padding-bottom: 10px;
+        border-top: solid 1px;
+        margin-top: 20px;
+        margin-right: 20px;
+        margin-left: 20px;
+      }
+
+      .tribe-two {
+        width: 10vw;
+        height: 20vh;
+        // background-color: red;
+      }
+
+      .tribe-three {
+        width: 10vw;
+        height: 20vh;
+        // background-color: black;
+      }
     }
-    
+  }
 
-    // @media(min-width: 0px) and (max-width:767px) {
-    //     .responsive-button-main {
-    //         display: none;
-    //     }
-    // }
+  .bar-graphs {
+    display: flex;
+    margin-bottom: 20px;
 
-    @media(min-width: 769px)  {
-        .responsive-button-main {
-            display: none;
-           
-        }
+    .bar-one {
+      flex: 1;
+      background-color: #323437;
+      border-radius: 8px;
+      margin-right: 20px;
     }
+
+    .bar-two {
+      flex: 1;
+      background-color: #323437;
+      border-radius: 8px;
+      // margin-right: 20px;
+    }
+  }
+
+  // @media(min-width: 0px) and (max-width:767px) {
+  //     .responsive-button-main {
+  //         display: none;
+  //     }
+  // }
+
+  @media (min-width: 769px) {
+    .responsive-button-main {
+      display: none;
+    }
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
 
 // .section-2 {
 //     flex: 5;
@@ -332,7 +345,7 @@
 
 //             .charts {
 //                 flex-direction: column;
-    
+
 //                 .chart-display {
 //                     margin-bottom: 50px;
 //                 }
