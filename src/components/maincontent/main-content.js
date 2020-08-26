@@ -105,6 +105,7 @@ class MainContent extends Component {
       ],
     };
 
+    // break these down to independent components
     return (
       <Fragment>
         {!this.state.isSmall && countryData && (
